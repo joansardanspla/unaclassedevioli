@@ -1,80 +1,94 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+:root {
+    --primary-color: #007BFF;
+    --background-color: #f8f9fa;
+    --text-color: #333;
+    --card-background: #fff;
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --shadow-dark: rgba(0, 0, 0, 0.2);
+    --border-radius: 12px;
+    --transition-speed: 0.3s;
+}
 
 body {
     font-family: 'Roboto', Arial, sans-serif;
     margin: 0;
     padding: 20px;
-    background-color: #f8f9fa;
-    color: #333;
-    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.7;
 }
 
-/* Encapçalament */
+/* 🔹 Encapçalament */
 header h1 {
     text-align: center;
     color: #222;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+    font-size: 2.8rem;
+    margin-bottom: 25px;
+    font-weight: 700;
 }
 
-/* Seccions generals */
+/* 🔹 Seccions */
 .section {
-    background: #fff;
+    background: var(--card-background);
     padding: 25px;
-    margin-bottom: 25px;
-    border-radius: 12px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-bottom: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: 0px 4px 12px var(--shadow-light);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
 }
 
 .section:hover {
-    transform: translateY(-3px);
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px var(--shadow-dark);
 }
 
-/* Títols */
+/* 🔹 Títols */
 h2 {
-    color: #007BFF;
-    font-size: 1.8rem;
+    color: var(--primary-color);
+    font-size: 1.9rem;
     margin-bottom: 15px;
+    font-weight: 700;
 }
 
-/* Galeria d'imatges */
+/* 🔹 Galeria d'imatges amb Grid */
 .images {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 12px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
     margin-top: 15px;
 }
 
 .images img {
     width: 100%;
     height: auto;
-    border-radius: 12px;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-radius: var(--border-radius);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
 }
 
 .images img:hover {
-    transform: scale(1.08);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.06);
+    box-shadow: 0px 6px 15px var(--shadow-dark);
 }
 
+/* 🔹 Imatges que ocupen tota la línia */
 .images img.full-width {
     grid-column: span 2;
 }
 
-/* Responsivitat */
-@media (max-width: 768px) {
-    .section {
-        padding: 20px;
-    }
-
+/* 🔹 Responsivitat */
+@media (max-width: 900px) {
     header h1 {
-        font-size: 2rem;
+        font-size: 2.4rem;
     }
 
     h2 {
         font-size: 1.6rem;
+    }
+
+    .section {
+        padding: 20px;
     }
 
     .images {
