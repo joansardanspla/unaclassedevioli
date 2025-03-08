@@ -23,13 +23,17 @@
         }
         .images {
             display: flex;
-            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
             margin-top: 10px;
         }
         .images img {
             width: 48%;
             height: auto;
             border-radius: 10px;
+        }
+        .images img.full-width {
+            width: 100%;
         }
     </style>
 </head>
@@ -47,7 +51,9 @@
         <div class="images">
             <img src="image1.jpg" alt="Imatge 1">
             <img src="image2.jpg" alt="Imatge 2">
-            <img src="image3.jpg" alt="Imatge 2">
+        </div>
+        <div class="images">
+            <img class="full-width" src="image3.jpg" alt="Imatge 3">
         </div>
     </div>
     
@@ -56,8 +62,8 @@
         <p><strong>Objectiu:</strong> Millorar la lectura de notes sense dependre dels colors i desenvolupar agilitat visual i tècnica.</p>
         <ul>
             <li><strong>Exposició del material:</strong> Es presenten cartolines amb seqüències de notes sense codis de colors.</li>
-            <li><strong>Pràctica de lectura a primera vista:</strong> Cada alumne toca el que apareix a les cartolines de manera successiva. Es treballa la rapidesa i seguretat en la identificació de notes.</li>
-            <li><strong>Variacions i dificultat progressiva:</strong> Canvis de ritme i d'articulació per afavorir la flexibilitat interpretativa. Introducció de petits desafiaments com accelerar el tempo o tocar en diferent ordre.</li>
+            <li><strong>Pràctica de lectura a primera vista:</strong> Cada alumne toca el que apareix a les cartolines de manera successiva. Es treballa la rapidesa i seguretat en la identificació d[...]
+            <li><strong>Variacions i dificultat progressiva:</strong> Canvis de ritme i d'articulació per afavorir la flexibilitat interpretativa. Introducció de petits desafiaments com accelerar el[...]
         </ul>
         <div class="images">
             <img src="image4.jpg" alt="Imatge 3">
