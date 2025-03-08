@@ -2,56 +2,86 @@
 
 body {
     font-family: 'Roboto', Arial, sans-serif;
-    margin: 20px;
+    margin: 0;
     padding: 20px;
-    background-color: #f0f0f0;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
 }
 
+/* Encapçalament */
 header h1 {
     text-align: center;
-    color: #333;
+    color: #222;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
 }
 
+/* Seccions generals */
 .section {
     background: #fff;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    color: #333;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.section:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Títols */
 h2 {
     color: #007BFF;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
 }
 
+/* Galeria d'imatges */
 .images {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
+    margin-top: 15px;
 }
 
 .images img {
-    flex: 1 1 calc(50% - 10px);
-    max-width: calc(50% - 10px);
+    width: 100%;
     height: auto;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-}
-
-.images img.full-width {
-    flex: 1 1 100%;
-    max-width: 100%;
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .images img:hover {
-    transform: scale(1.05);
+    transform: scale(1.08);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-@media (max-width: 600px) {
-    .images img {
-        flex: 1 1 100%;
-        max-width: 100%;
+.images img.full-width {
+    grid-column: span 2;
+}
+
+/* Responsivitat */
+@media (max-width: 768px) {
+    .section {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    .images {
+        grid-template-columns: 1fr;
+    }
+
+    .images img.full-width {
+        grid-column: span 1;
     }
 }
