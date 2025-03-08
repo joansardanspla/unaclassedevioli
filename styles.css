@@ -7,6 +7,11 @@ body {
     background-color: #f0f0f0;
 }
 
+header h1 {
+    text-align: center;
+    color: #333;
+}
+
 .section {
     background: #fff;
     padding: 20px;
@@ -42,4 +47,11 @@ h2 {
 
 .images img:hover {
     transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+    .images img {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
 }
